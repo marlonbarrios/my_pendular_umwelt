@@ -2,6 +2,8 @@
 
 **A speculative Latentwelt — text written by pendulum motion**
 
+**Live app:** [https://my-pendular-umwelt.vercel.app/](https://my-pendular-umwelt.vercel.app/)
+
 ![Landing screen — light mode with preload pendulums](public/screenshots/01-pendular-landing-light.png)
 
 An interactive web work by [Marlon Barrios Solano](https://marlonbarrios.github.io/). GPT-4o generates short philosophical texts about computational *Umwelt* and latent space; OpenAI TTS reads them aloud while branching pendulums inscribe the words along their moving trails — letter by letter, branch by branch, generation after generation.
@@ -10,7 +12,9 @@ Powered by **OpenAI GPT-4o**, **OpenAI TTS-1 HD**, and **p5.js**.
 
 ## Live App
 
-**[https://semantic-tensegrities.vercel.app/](https://semantic-tensegrities.vercel.app/)**
+**[https://my-pendular-umwelt.vercel.app/](https://my-pendular-umwelt.vercel.app/)**
+
+Open the link above in your browser. Select a language, press **Spacebar** to start, and the pendulums will generate, speak, and write each passage. No install required — only an OpenAI API key configured on the server (Vercel) for production use.
 
 ---
 
