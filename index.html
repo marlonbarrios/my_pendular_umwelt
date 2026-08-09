@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Pendular Umwelt</title>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <script type="module" src="/pendulum.js"></script>
+  </head>
+  <body>
+    <div class="ui-controls">
+      <button id="theme-toggle" class="ui-button" type="button" aria-pressed="false" tabindex="-1">
+        Dark mode
+      </button>
+      <button id="sound-toggle" class="ui-button" type="button" aria-pressed="true" tabindex="-1">
+        Sound on
+      </button>
+    </div>
+    <nav id="language-menu" class="language-menu" aria-label="Output language">
+      <span class="language-menu__hint">Select language</span>
+      <select id="language-select" class="language-menu__select" aria-label="Language"></select>
+    </nav>
+    <p id="generation-status" class="generation-status" hidden aria-live="polite"></p>
+    <main></main>
+    <footer class="credits" aria-label="Credits">
+      <p>
+        <a href="https://marlonbarrios.github.io/" target="_blank" rel="noopener noreferrer">Marlon Barrios Solano</a>
+      </p>
+      <p class="credits__powered">Powered by OpenAI · p5.js</p>
+    </footer>
+  </body>
+</html>

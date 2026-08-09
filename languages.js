@@ -1,0 +1,70 @@
+// Languages supported by GPT-4o and TTS-1 HD (aligned with OpenAI / Whisper set)
+export const MODEL_LANGUAGES = [
+  { code: 'af', label: 'Afrikaans', native: 'Afrikaans', locale: 'South Africa' },
+  { code: 'ar', label: 'Arabic', native: 'العربية', locale: 'Egypt' },
+  { code: 'hy', label: 'Armenian', native: 'Հայերեն', locale: 'Armenia' },
+  { code: 'az', label: 'Azerbaijani', native: 'Azərbaycan', locale: 'Azerbaijan' },
+  { code: 'be', label: 'Belarusian', native: 'Беларуская', locale: 'Belarus' },
+  { code: 'bs', label: 'Bosnian', native: 'Bosanski', locale: 'Bosnia and Herzegovina' },
+  { code: 'bg', label: 'Bulgarian', native: 'Български', locale: 'Bulgaria' },
+  { code: 'ca', label: 'Catalan', native: 'Català', locale: 'Spain' },
+  { code: 'zh', label: 'Chinese', native: '中文', locale: 'Mandarin, Simplified' },
+  { code: 'hr', label: 'Croatian', native: 'Hrvatski', locale: 'Croatia' },
+  { code: 'cs', label: 'Czech', native: 'Čeština', locale: 'Czechia' },
+  { code: 'da', label: 'Danish', native: 'Dansk', locale: 'Denmark' },
+  { code: 'nl', label: 'Dutch', native: 'Nederlands', locale: 'Netherlands' },
+  { code: 'en', label: 'English', native: 'English', locale: 'United States' },
+  { code: 'et', label: 'Estonian', native: 'Eesti', locale: 'Estonia' },
+  { code: 'fi', label: 'Finnish', native: 'Suomi', locale: 'Finland' },
+  { code: 'fr', label: 'French', native: 'Français', locale: 'France' },
+  { code: 'gl', label: 'Galician', native: 'Galego', locale: 'Galicia' },
+  { code: 'de', label: 'German', native: 'Deutsch', locale: 'Germany' },
+  { code: 'el', label: 'Greek', native: 'Ελληνικά', locale: 'Greece' },
+  { code: 'he', label: 'Hebrew', native: 'עברית', locale: 'Israel' },
+  { code: 'hi', label: 'Hindi', native: 'हिन्दी', locale: 'India' },
+  { code: 'hu', label: 'Hungarian', native: 'Magyar', locale: 'Hungary' },
+  { code: 'is', label: 'Icelandic', native: 'Íslenska', locale: 'Iceland' },
+  { code: 'id', label: 'Indonesian', native: 'Bahasa Indonesia', locale: 'Indonesia' },
+  { code: 'it', label: 'Italian', native: 'Italiano', locale: 'Italy' },
+  { code: 'ja', label: 'Japanese', native: '日本語', locale: 'Japan' },
+  { code: 'kn', label: 'Kannada', native: 'ಕನ್ನಡ', locale: 'India' },
+  { code: 'kk', label: 'Kazakh', native: 'Қазақ', locale: 'Kazakhstan' },
+  { code: 'ko', label: 'Korean', native: '한국어', locale: 'Korea' },
+  { code: 'lv', label: 'Latvian', native: 'Latviešu', locale: 'Latvia' },
+  { code: 'lt', label: 'Lithuanian', native: 'Lietuvių', locale: 'Lithuania' },
+  { code: 'mk', label: 'Macedonian', native: 'Македонски', locale: 'North Macedonia' },
+  { code: 'ms', label: 'Malay', native: 'Bahasa Melayu', locale: 'Malaysia' },
+  { code: 'mr', label: 'Marathi', native: 'मराठी', locale: 'India' },
+  { code: 'mi', label: 'Māori', native: 'Te Reo Māori', locale: 'New Zealand' },
+  { code: 'ne', label: 'Nepali', native: 'नेपाली', locale: 'Nepal' },
+  { code: 'no', label: 'Norwegian', native: 'Norsk', locale: 'Norway' },
+  { code: 'fa', label: 'Persian', native: 'فارسی', locale: 'Iran' },
+  { code: 'pl', label: 'Polish', native: 'Polski', locale: 'Poland' },
+  { code: 'pt', label: 'Portuguese', native: 'Português', locale: 'Brazil' },
+  { code: 'ro', label: 'Romanian', native: 'Română', locale: 'Romania' },
+  { code: 'ru', label: 'Russian', native: 'Русский', locale: 'Russia' },
+  { code: 'sr', label: 'Serbian', native: 'Српски', locale: 'Serbia' },
+  { code: 'sk', label: 'Slovak', native: 'Slovenčina', locale: 'Slovakia' },
+  { code: 'sl', label: 'Slovenian', native: 'Slovenščina', locale: 'Slovenia' },
+  { code: 'es', label: 'Spanish', native: 'Español', locale: 'Spain' },
+  { code: 'sw', label: 'Swahili', native: 'Kiswahili', locale: 'Kenya' },
+  { code: 'sv', label: 'Swedish', native: 'Svenska', locale: 'Sweden' },
+  { code: 'tl', label: 'Filipino', native: 'Filipino', locale: 'Philippines' },
+  { code: 'ta', label: 'Tamil', native: 'தமிழ்', locale: 'India' },
+  { code: 'th', label: 'Thai', native: 'ไทย', locale: 'Thailand' },
+  { code: 'tr', label: 'Turkish', native: 'Türkçe', locale: 'Türkiye' },
+  { code: 'uk', label: 'Ukrainian', native: 'Українська', locale: 'Ukraine' },
+  { code: 'ur', label: 'Urdu', native: 'اردو', locale: 'Pakistan' },
+  { code: 'vi', label: 'Vietnamese', native: 'Tiếng Việt', locale: 'Vietnam' },
+  { code: 'cy', label: 'Welsh', native: 'Cymraeg', locale: 'United Kingdom' },
+];
+
+export const DEFAULT_LANGUAGE_CODE = 'en';
+
+export function getLanguageByCode(code) {
+  return MODEL_LANGUAGES.find((lang) => lang.code === code) || MODEL_LANGUAGES.find((lang) => lang.code === DEFAULT_LANGUAGE_CODE);
+}
+
+export function formatLanguageOption(lang) {
+  return lang.native === lang.label ? lang.label : lang.native;
+}
