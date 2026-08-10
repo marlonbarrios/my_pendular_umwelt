@@ -7,6 +7,7 @@
   --text-strong: rgba(0, 0, 0, 0.78);
   --border: rgba(0, 0, 0, 0.18);
   --border-strong: rgba(0, 0, 0, 0.38);
+  --cursor-crosshair: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath stroke='%23555' stroke-width='0.75' d='M12 0v24M0 12h24'/%3E%3C/svg%3E") 12 12, crosshair;
 }
 
 [data-theme='dark'] {
@@ -17,11 +18,13 @@
   --text-strong: rgba(255, 255, 255, 0.88);
   --border: rgba(255, 255, 255, 0.22);
   --border-strong: rgba(255, 255, 255, 0.42);
+  --cursor-crosshair: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath stroke='%23aaa' stroke-width='0.75' d='M12 0v24M0 12h24'/%3E%3C/svg%3E") 12 12, crosshair;
 }
 
 html,
 body {
   background: var(--page-bg);
+  cursor: var(--cursor-crosshair);
 }
 
 main {
@@ -30,10 +33,12 @@ main {
   align-items: center;
   height: 100vh;
   overflow: hidden;
+  cursor: var(--cursor-crosshair);
 }
 
 canvas {
   display: block;
+  cursor: var(--cursor-crosshair);
 }
 
 .ui-controls {
@@ -54,7 +59,7 @@ canvas {
   background: transparent;
   color: var(--text);
   font: 13px Georgia, 'Times New Roman', serif;
-  cursor: pointer;
+  cursor: var(--cursor-crosshair);
 }
 
 .ui-button:hover,
@@ -94,7 +99,7 @@ canvas {
   background: transparent;
   color: var(--text);
   font: 13px Georgia, 'Times New Roman', serif;
-  cursor: pointer;
+  cursor: var(--cursor-crosshair);
   min-width: 5.5rem;
   max-width: 11rem;
   text-overflow: ellipsis;
@@ -144,6 +149,7 @@ canvas {
   color: var(--text);
   text-decoration: none;
   border-bottom: 1px solid var(--border);
+  cursor: var(--cursor-crosshair);
 }
 
 .credits a:hover,
