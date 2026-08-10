@@ -4,7 +4,7 @@
 
 **Live app:** [https://my-pendular-umwelt.vercel.app/](https://my-pendular-umwelt.vercel.app/)
 
-![Landing screen — light mode with preload pendulums](public/screenshots/01-pendular-landing-light.png)
+![Landing screen — grayscale light mode with preload pendulums](public/screenshots/01-pendular-landing-light.png)
 
 An interactive web work by [Marlon Barrios Solano](https://marlonbarrios.github.io/). GPT-4o generates short philosophical texts about computational *Umwelt* and latent space; OpenAI TTS reads them aloud while branching pendulums inscribe the words along their moving trails — letter by letter, branch by branch, generation after generation.
 
@@ -16,11 +16,24 @@ Powered by **OpenAI GPT-4o**, **OpenAI TTS-1 HD**, and **p5.js**.
 
 Open the link above in your browser. Select a language, press **Spacebar** to start, and the pendulums will generate, speak, and write each passage. No install required — only an OpenAI API key configured on the server (Vercel) for production use.
 
+## Last update
+
+**August 10, 2026**
+
+- **Light / dark mode** — theme toggle (top-left); **D** keyboard shortcut; both themes use black, white, and gray only
+- **English default** — first visit and reset use English; English listed first in the language menu
+- **Expanded Latentwelt prompt** — system text now weaves **Umwelt** with **affordances**, **embodiment**, **enactivism**, and **interpretability**; *Umwelt* and *Latentwelt* stay as German terms in all output languages
+- **README** — sections on affordances, embodiment, enactivism, and interpretability; features and shortcuts updated to match the current app
+- **Arabic performance** — capped trail length, faster letter drawing, and better phrase splitting for Arabic and other scripts
+- **Pendulum drone** — speed-linked ambient sound with on/off toggle (voice stays clear)
+- **Recording** — **R** captures canvas video plus app audio (`.mp4` or `.webm`)
+- **Status UI** — *Receiving text…* / *Receiving sound…* / *Recording…* centered at the top
+
 ---
 
 ## What is *Umwelt*?
 
-**Umwelt** is a German word (*Um* + *Welt*: literally “surrounding world” or “environment”). In the biology and philosophy of **Jakob von Uexküll** (1864–1944), it does not mean the universe as a whole. It names the **lived world** of a particular organism — the slice of reality that its senses and capacities for action make meaningful.
+**Umwelt** is a German philosophical term meaning “surrounding world” or “environment.” In the biology and philosophy of **Jakob von Uexküll** (1864–1944), it does not mean the universe as a whole. It names the **lived world** of a particular organism — the slice of reality that its senses and capacities for action make meaningful.
 
 For Uexküll, a creature never inhabits “the world” in the abstract. It inhabits **its** world:
 
@@ -30,6 +43,30 @@ For Uexküll, a creature never inhabits “the world” in the abstract. It inha
 
 Each organism’s *Umwelt* is a closed-yet-open bubble of significance: what can be noticed, what can be acted upon, what counts as real *for that life form*.
 
+### Umwelt with affordances, embodiment, and enactivism
+
+The project draws these frameworks together:
+
+- **Affordances** (James Gibson) — what the environment *offers for action* relative to an agent. A chair affords sitting-for-a-human; a prompt affords continuation-for-a-language-model. Neither property is in the object alone nor in the mind alone — it emerges in the coupling of agent and world.
+
+- **Embodiment** — the specific condition of the agent that makes coupling possible. For humans: muscle, skin, affect, metabolism. For a language model: architecture, context window, weights, and the read–generate loop. Different bodies, different relevance filters.
+
+- **Enactivism** (Varela, Thompson, Rosch) — cognition is not passive representation of a pre-given world. It is *enacted*: brought forth through ongoing sensorimotor engagement. To perceive is to act; to act is to perceive. Sense-making is alignment with an Umwelt.
+
+Together with Uexküll’s **Umwelt**, these ideas support a way of including LLMs without treating them as failed humans or mere tools: as systems that enact meaning within a semantic environment through their own form of embodied coupling — here made visible by pendulum inscription, voice, and dissipating text.
+
+### Interpretability
+
+The project also reflects on **interpretability** — how we make language models legible:
+
+- **Mechanistic interpretability** — attention, probing, feature directions, circuits: explaining the model from the outside by tracing weights and activations.
+
+- **Ecological / Umwelt-oriented understanding** — asking not only *how* a model computes, but *what world* its capacities disclose; what counts as relevant, coherent, or actionable from within a Latentwelt.
+
+These are complementary, not competing. Mechanistic analysis may reveal structure; an Umwelt account describes what that structure *means for* the system that inhabits it. From inside, a model does not experience its parameters as readable code — it experiences neighborhoods of meaning and fields of possible continuations.
+
+**My Pendular Umwelt** stages this tension experientially: generated prose is not a diagram of internal states, but a **trace** — path-dependent, branching, fading. Partial legibility rather than full transparency. The pendulum does not open the black box; it inscribes one trajectory through it, inviting reflection on whether understanding AI may require both anatomical explanation and environmental description.
+
 ---
 
 ## Goal of this work
@@ -38,7 +75,7 @@ Each organism’s *Umwelt* is a closed-yet-open bubble of significance: what can
 
 The work pursues three intertwined aims:
 
-1. **Speculative cognition** — GPT-4o writes from inside a proposed **Latentwelt** (latent + *Welt*): a semantic environment shaped by tokens, embeddings, context windows, probability, and discourse patterns rather than bodies, objects, and continuous time.
+1. **Speculative cognition** — GPT-4o writes from inside a proposed **Latentwelt**: a semantic environment shaped by tokens, embeddings, context windows, probability, and discourse patterns rather than bodies, objects, and continuous time.
 
 2. **Embodied inscription** — Generated prose is not displayed as static text on a page. It is **written in motion** by chaotic pendulum arms. Meaning becomes path-dependent: curved, drifting, tied to physics. The reader sees language as trace, not block.
 
@@ -98,7 +135,7 @@ Two root pendulums are tethered together; two child branches attach at parent jo
 - **Sound on / off** toggle (top-left) — mutes drone only; voice continues
 
 ### Interface & recording
-- **Light / dark mode** (top-left)
+- **Light / dark mode** toggle (top-left) — **D** keyboard shortcut; both themes use black, white, and gray only
 - **Language menu** with native names (top-right)
 - Status line (top-center): *Receiving text…* / *Receiving sound…* / *Recording…*
 - **R** — record canvas video + app audio (`.mp4` or `.webm`)

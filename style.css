@@ -4,9 +4,9 @@
   --page-bg: #ffffff;
   --text-muted: rgba(0, 0, 0, 0.42);
   --text: rgba(0, 0, 0, 0.55);
-  --text-strong: rgba(0, 0, 0, 0.72);
+  --text-strong: rgba(0, 0, 0, 0.78);
   --border: rgba(0, 0, 0, 0.18);
-  --border-strong: rgba(0, 0, 0, 0.35);
+  --border-strong: rgba(0, 0, 0, 0.38);
 }
 
 [data-theme='dark'] {
